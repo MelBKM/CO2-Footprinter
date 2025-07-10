@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="auto" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <title>Unsere Motivation</title>
+    <style type="text/css"> 
+        p { color: rgb(7, 11, 7);}
+        body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+        }
+        h1 {
+        text-align: center;
+        color: #13b56a;
+        }
+        footer { clear: both; background-color: rgb(131, 203, 131); }
+        footer nav ul { text-align: center; }
+        footer nav ul li { display: inline; }
+    </style>
+</head>
+
+<body>
+<h1><p> Unsere Motivation, und warum uns dieses Thema alle betrifft </p></h1>
+    <nav>
+        <li>
+            wir hinterlassen alle unsere Fußspuren 
+        </li>
+         <li>
+            die Welt gehört uns nicht allein
+        </li>
+        <li>
+            wir möchten den Menschen transparent zeigen wer wieviel in die Luft bläst
+        </li>
+    </nav>
+    <p><a href="CO2Footprint.html">Home</a></p>
+</body>
+<footer>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="zeigeDatenschutz()">Datenschutz</a></li>
+                <li><a href="#" onclick="zeigeImpressum()">Impressum</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Versteckter Datenschutz-Text -->
+    <div id="DatenschutzBereich" style="display:none; margin-top:20px; padding:15px; border:1px solid #aaa; background:#f9f9f9;">
+    <h2>Datenschutz</h2>
+    <p>sämtliche Inhalte wurden sorgfältig überprüft und nach schriftlicher Genehmigung veröffentlicht </p>
+    <button onclick="schließeDatenschutz()">Schließen</button>
+    </div>
+    <!-- Versteckter Impressum-Text -->
+    <div id="impressumBereich" style="display:none; margin-top:20px; padding:15px; border:1px solid #aaa; background:#f9f9f9;">
+    <h2>Impressum</h2>
+    <p>Footprint-Detectives - Baker Street -  12345 Anderswelt </p>
+    <button onclick="schließeImpressum()">Schließen</button>
+    </div>
+    
+    <script>
+        function zeigeDatenschutz() {
+            document.getElementById("DatenschutzBereich").style.display = "block";
+            // Automatisch runterscrollen zum Datenschutz
+            document.getElementById("DatenschutzBereich").scrollIntoView({ behavior: "smooth" });
+        }
+        function schließeDatenschutz() {
+            document.getElementById("DatenschutzBereich").style.display = "none";
+        }
+ 
+        function zeigeImpressum() {
+            document.getElementById("impressumBereich").style.display = "block";
+            // Automatisch runterscrollen zum Datenschutz
+            document.getElementById("impressumBereich").scrollIntoView({ behavior: "smooth" });
+        }
+        function schließeImpressum() {
+            document.getElementById("impressumBereich").style.display = "none";
+        }
+    </script>
+</html>
+
+
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Unser Team</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .member {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(131, 203, 131);
+      text-align: center;
+    }
+    
+    .member h3 {
+      margin: 10px 0 5px;
+      color: #444;
+    }
+    .member img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .member p {
+      margin: 0;
+      font-size: 0.95em;
+      color: #666;
+    }
+    footer { clear: both; background-color: rgb(131, 203, 131); }
+    footer nav ul { text-align: center; }
+    footer nav ul li { display: inline; }
+  </style>
+</head>
+<body>
+  <h1>Unser Team</h1>
+  <div class="team-container">
+    <div class="member">
+      <img src="Cenarius.jpg" alt="Cenarius">
+      <h3>Cenarius</h3>
+      <p>CO2 Experte</p>
+    </div>
+    <div class="member">
+      <img src="Melanie.jpg" alt="Melanie">
+      <h3>Melanie</h3>
+      <p>Entwicklerin im Studium
+      </p>
+    </div>
+    <div class="member">
+      <img src="Malfurion.jpg" alt="Malfurion">
+      <h3>Malfurion</h3>
+      <p>Head of Marketing</p>
+    </div>
+  </div>
+  <p><a href="CO2Footprint.html">Home</a></p>
+</body>
+<footer>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="zeigeDatenschutz()">Datenschutz</a></li>
+                <li><a href="#" onclick="zeigeImpressum()">Impressum</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Versteckter Datenschutz-Text -->
+    <div id="DatenschutzBereich" style="display:none; margin-top:20px; padding:15px; border:1px solid #aaa; background:#f9f9f9;">
+    <h2>Datenschutz</h2>
+    <p>sämtliche Inhalte wurden sorgfältig überprüft und nach schriftlicher Genehmigung veröffentlicht </p>
+    <button onclick="schließeDatenschutz()">Schließen</button>
+    </div>
+    <!-- Versteckter Impressum-Text -->
+    <div id="impressumBereich" style="display:none; margin-top:20px; padding:15px; border:1px solid #aaa; background:#f9f9f9;">
+    <h2>Impressum</h2>
+    <p>Footprint-Detectives - Baker Street -  12345 Anderswelt </p>
+    <button onclick="schließeImpressum()">Schließen</button>
+    </div>
+    
+    <script>
+        function zeigeDatenschutz() {
+            document.getElementById("DatenschutzBereich").style.display = "block";
+            // Automatisch runterscrollen zum Datenschutz
+            document.getElementById("DatenschutzBereich").scrollIntoView({ behavior: "smooth" });
+        }
+        function schließeDatenschutz() {
+            document.getElementById("DatenschutzBereich").style.display = "none";
+        }
+ 
+        function zeigeImpressum() {
+            document.getElementById("impressumBereich").style.display = "block";
+            // Automatisch runterscrollen zum Datenschutz
+            document.getElementById("impressumBereich").scrollIntoView({ behavior: "smooth" });
+        }
+        function schließeImpressum() {
+            document.getElementById("impressumBereich").style.display = "none";
+        }
+    </script>
+</html>

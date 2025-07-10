@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="auto" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <title>CO2-Footprint</title>
+    
+    <style type="text/css">
+        p { color: rgb(7, 11, 7);}
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            background-color: rgb(131, 203, 131);
+            padding: 1em;
+            border: 5px solid rgb(20, 19, 23);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+        }
+        h1 { color: rgb(17, 21, 16); }
+                table { font-size: 200%; }a
+
+        header { background-color: #afa; }
+        header nav ul { text-align: right; }
+        header nav ul li { display: inline; }
+
+        .kopfbereich {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(131, 203, 131);
+        border: 5px solid rgb(20, 19, 23);
+        padding: 1em;
+        position: relative;
+        }
+        .kopfbereich h1 {
+        font-size: 50px;
+        margin: 0;
+        }
+        .kopfbereich img {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 180px;
+        height: auto;
+        transition: all 0.3s ease;
+        }
+        .quelle {
+        font-size: 10px;
+        color: #aaf;
+        text-align: right;
+        margin-top: 5px;
+        margin-right: 20px;
+        } 
+        @media (max-width: 600px) {
+        .kopfbereich img {
+        width: 100px;
+        right: 4px;
+        top: auto;
+        bottom: 10px;
+        transform: none;
+        position: relative;
+        margin-top: 10px;
+            }
+        }
+        
+        main { display: flex; }
+        main nav { width: 20%; background-color: rgb(131, 203, 131); 
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            padding-inline-start: 30px;
+            list-style: none;}
+        main { font-size: 20px; }
+        main div { display: block;
+            width: 100%;}
+
+        table {background-color: rgb(158, 201, 109); }
+        table {
+            width: 400px;
+            margin-left: auto;
+            margin-right: 0;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        footer { clear: both; background-color: rgb(131, 203, 131); }
+        footer nav ul { text-align: center; }
+        footer nav ul li { display: inline; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagramm.com">Instagramm</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="kopfbereich">
+            <h1>CO2 Footprint</h1> 
+            <img src="CO2.png" alt=Quelle: KI-generiert>
+            </div>
+            <p class="quelle"> Bildquelle: KI-generiert</p>
+            <p style="font-size: 25px;">Auf dieser Seite werden fiktive CO2 Emmisionsdaten dargestellt</p>
+        </section>
+    </header>
+
+    <main>
+        <nav>
+        <ul>
+            <li><a href="Team.html">Unser Team</a></li>
+            <li><a href="Motivation.html">Motivation</a></li>
+        </ul>
+    </nav>
+
+    <div>
+    <table id ="co2Tabelle">
+        <thead>
+        <tr>
+            <th>Land
+                <input type="text" id="landFilter" placeholder="Nach Land filtern">
+            </th>
+            <th>Unternehmen
+                <input type="text" id="unternehmenFilter" placeholder="Nach Unternehmen filtern">
+            </th>
+            <th>CO2 Ausstoß</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td style="font-size: 15px;">Azeroth</td>
+            <td style="font-size: 15px;">Todesminen</td>
+            <td style="font-size: 15px;">9 Tonnen</td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;">Pandaria</td>
+            <td style="font-size: 15px;">Brauerei Sturmwind</td>
+            <td style="font-size: 15px;">7,8 Tonnen</td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;">Nordend</td>
+            <td style="font-size: 15px;">Eiskrone</td>
+            <td style="font-size: 15px;">15 Tonnen</td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;">Dracheninseln</td>
+            <td style="font-size: 15px;">Sitz der Aspekte</td>
+            <td style="font-size: 15px;">12 Tonnen</td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;">Shadowland</td>
+            <td style="font-size: 15px;">Sanktum der Herrschaft</td>
+            <td style="font-size: 15px;">5 Tonnen</td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;">Ödland</td>
+            <td style="font-size: 15px;">Vault-Tec</td>
+            <td style="font-size: 15px;">21 Tonnen</td>
+        </tr>
+
+        </tbody>
+    </table>
+    </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="zeigeDatenschutz()">Datenschutz</a></li>
+                <li><a href="#" onclick="zeigeImpressum()">Impressum</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Versteckter Datenschutz-Text -->
+    <div id="DatenschutzBereich" style="display:none; margin-top:20px; padding:15px; border:1px solid #aaa; background:#f9f9f9;">
+    <h2>Datenschutz</h2>
+    <p>sämtliche Inhalte wurden sorgfältig überprüft und nach schriftlicher Genehmigung veröffentlicht </p>
+    <button onclick="schließeDatenschutz()">Schließen</button>
+    </div>
+    <!-- Versteckter Impressum-Text -->
+    <div id="impressumBereich" style="display:none; margin-top:20px; padding:15px; border:1px solid #aaa; background:#f9f9f9;">
+    <h2>Impressum</h2>
+    <p>Footprint-Detectives - Baker Street -  12345 Anderswelt </p>
+    <button onclick="schließeImpressum()">Schließen</button>
+    </div>
+    
+    <script>
+        function zeigeDatenschutz() {
+            document.getElementById("DatenschutzBereich").style.display = "block";
+            // Automatisch runterscrollen zum Datenschutz
+            document.getElementById("DatenschutzBereich").scrollIntoView({ behavior: "smooth" });
+        }
+        function schließeDatenschutz() {
+            document.getElementById("DatenschutzBereich").style.display = "none";
+        }
+ 
+        function zeigeImpressum() {
+            document.getElementById("impressumBereich").style.display = "block";
+            // Automatisch runterscrollen zum Datenschutz
+            document.getElementById("impressumBereich").scrollIntoView({ behavior: "smooth" });
+        }
+        function schließeImpressum() {
+            document.getElementById("impressumBereich").style.display = "none";
+        }
+        
+
+        const landInput = document.getElementById("landFilter");
+        const unternehmenInput = document.getElementById("unternehmenFilter");
+
+            landInput.addEventListener("keyup", filterTable);
+            unternehmenInput.addEventListener("keyup", filterTable);
+
+        function sanitizeInput(str) {
+        return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        function filterTable() {
+        const land = sanitizeInput(landInput.value.toLowerCase());
+        const unternehmen = sanitizeInput(unternehmenInput.value.toLowerCase());
+        const rows = document.querySelectorAll("#co2Tabelle tbody tr");
+
+        rows.forEach(row => {
+            const landText = row.cells[0].textContent.toLowerCase();
+            const unternehmenText = row.cells[1].textContent.toLowerCase();
+            const match = landText.includes(land) && unternehmenText.includes(unternehmen);
+            row.style.display = match ? "" : "none";
+        });
+        }
+
+        let sortDir = true;
+        function sortTable(columnIndex) {
+        const table = document.getElementById("co2Tabelle");
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+
+        const sorted = rows.sort((a, b) => {
+            const aText = a.cells[columnIndex].textContent.toLowerCase();
+            const bText = b.cells[columnIndex].textContent.toLowerCase();
+            return sortDir ? aText.localeCompare(bText) : bText.localeCompare(aText);
+        });
+
+        sortDir = !sortDir;
+            sorted.forEach(row => tbody.appendChild(row));
+        }
+    </script> 
+</body>
+</html>
